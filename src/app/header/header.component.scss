@@ -1,0 +1,19 @@
+.header-main {
+  height: 120px;
+  background-color: #eeeff0;
+
+  .header-filter{
+    margin-top: 2.5rem;
+    margin-right: 3rem;
+  }
+}
+
+input{
+  padding-right: 2.5rem;
+}
+
+.pi-times{
+  position: absolute;
+  right: 1rem;
+  cursor: pointer;
+}

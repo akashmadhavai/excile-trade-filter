@@ -1,0 +1,37 @@
+<div class="main d-flex">
+  <div>
+    <h6 class='mt-3'>Stash List</h6>
+    <ng-container *ngFor="let stash of stashes">
+      <div *ngIf="stash.id.length > 0" class="stash">
+        <p class="field">
+          Id: <span class="value"> {{ stash.id }} </span>
+        </p>
+        <p class="field">
+          Account name: <span class="value"> {{ stash.accountName }}</span>
+        </p>
+        <p class="field">
+          League: <span class="value"> {{ stash.league }} </span>
+        </p>
+        <button class='btn btn-primary' (click)="onStashClick(stash)">Show items</button>
+      </div>
+    </ng-container>
+    <div *ngIf='stashes.length == 0'>
+      <h6>No match found!</h6>
+    </div>
+  </div>
+
+  <div class='items-container' >
+    <h6 *ngIf='stashes.length != 0' class='mt-3 item-header'>{{selectedStash && selectedStash.accountName ? selectedStash.accountName + " | "+ selectedStash.id  :'Click on Show stash from left side list to see related items'}} </h6>
+    <div *ngFor='let item of selectedStashItems' class="item">
+      <p class="field">
+       Item id: <span class="value"> {{  item.id }} </span>
+      </p>
+      <p class="field">
+        Name: <span class="value"> {{ item.name ?  item.name : '---'}}</span>
+      </p>
+      <p class="field">
+        Type Line: <span class="value"> {{  item.typeLine }} </span>
+      </p>
+    </div>
+  </div>
+</div>

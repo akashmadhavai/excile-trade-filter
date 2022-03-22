@@ -1,0 +1,13 @@
+<div class="header-main d-flex justify-content-between">
+  <div class='header-title m-4'>
+    <h1>Trade filter</h1>
+  </div>
+  <div class='header-filter'>
+    <p-dropdown class='mr-3' [showClear]="true" (onChange)='onLeagueSelect($event)' optionLabel="label" placeholder="Select a League" [options]="leagues" [(ngModel)]="selectedLeague"></p-dropdown>
+    <span class="p-input-icon-left">
+      <i class="pi pi-search" ></i>
+      <input type="text" pInputText [(ngModel)]="searchQuery" (keyup)="onSearch()" placeholder="Search by Id">
+      <i *ngIf='searchQuery.length > 0' class="pi pi-times" (click)="clearQuery()"></i>
+    </span>
+  </div>
+</div>

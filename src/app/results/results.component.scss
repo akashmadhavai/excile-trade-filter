@@ -1,0 +1,57 @@
+.main {
+  margin-left: 1rem;
+}
+.stash {
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  cursor: pointer;
+  &:hover {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+  .field {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 600;
+    padding-left: 0.5rem;
+    margin-top: 6px;
+    .value {
+      font-weight: 500;
+    }
+  }
+
+  button {
+    float: right;
+    position: relative;
+    bottom: 3rem;
+
+    &:focus{
+      background-color: rgb(233, 230, 230);
+      color: black;
+      font-weight: 600;
+    }
+  }
+}
+
+.items-container {
+  position: relative;
+  left: 4rem;
+  .item {
+    padding: 1rem;
+    border: 1px solid rgb(175, 174, 174);
+    margin-top: 1rem;
+    border-radius: 3px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    .field {
+      display: flex;
+      font-family: "Courier New", Courier, monospace;
+      font-weight: 600;
+    }
+    .value {
+      font-weight: 500;
+    }
+
+  }
+}
